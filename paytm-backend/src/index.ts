@@ -1,9 +1,10 @@
-const express = require("express");
-const cors = require("cors");
-const mongoose = require("mongoose");
+
+import  express  from "express";
+import cors from "cors";
+import mongoose from "mongoose";
 import { JwtPayload } from "jsonwebtoken";
 import { MONGO_URI,PORT,JWT_SECRET} from "./config";
-const {router:mainRouter} = require("./routes/index");
+import { router as mainRouter } from "./routes";
 const app = express();
 
 app.use(cors())
