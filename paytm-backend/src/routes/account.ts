@@ -13,7 +13,7 @@ router.get("/balance",authMiddleware,async(req:Request,res:Response):Promise<any
         const account = await Account.findOne({userId:userId});
         return res.status(200).json({
             message:"Balance fetched Successfully!",
-            balance:account.balance,
+            balance:account?.balance,
         });
     }catch(error){
         return res.status(411).json({
